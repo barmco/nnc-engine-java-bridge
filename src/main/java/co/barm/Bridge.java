@@ -34,7 +34,7 @@ public class Bridge {
 
     public static void enqueue(EngineBoundQueueItem item) {
         if(!own) {
-            throw new IllegalStateException("enqueue: you can't enqueue until grab the semaphore");
+            throw new IllegalStateException("enqueue: you can't enqueue until before grab the semaphore");
         }
         queue.add(item);
     }
